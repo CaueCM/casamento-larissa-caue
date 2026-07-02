@@ -47,6 +47,8 @@
 
 // ===================== RSVP FORM ===================== //
 (function () {
+  const RSVP_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxKExJv5ZMbzNsPzjnzDxjqNBOjjtwgEfOiKzMHGE5BP9EBzP36ddLepUZkSI174yiF/exec';
+
   const btnYes = document.getElementById('btnYes');
   const btnNo = document.getElementById('btnNo');
   const goingInput = document.getElementById('goingInput');
@@ -83,7 +85,7 @@
     updateGuests();
   });
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const nome = form.nome.value.trim();
@@ -98,15 +100,38 @@
       return;
     }
 
-    // TODO: conectar a um backend (ex.: Formspree, Google Sheets via Apps Script,
-    // ou uma rota de API própria) para persistir as respostas do RSVP.
-    // Por enquanto a confirmação só é validada no navegador.
-    feedback.textContent = `Obrigado, ${nome}! Sua resposta foi registrada por aqui — em breve conectaremos o envio automático.`;
-    feedback.style.color = '#5B6A46';
-    form.reset();
-    setGoing('');
-    guests = 1;
-    updateGuests();
+    const submitBtn = form.querySelector('.rsvp-submit');
+    const originalLabel = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando…';
+    feedback.textContent = '';
+
+    const payload = {
+      nome,
+      comparecera: goingInput.value,
+      acompanhantes: guestsInput.value,
+      recado: form.recado.value.trim(),
+    };
+
+    try {
+      await fetch(RSVP_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload),
+      });
+      feedback.textContent = `Obrigado, ${nome}! Sua confirmação foi registrada com carinho. 🌿`;
+      feedback.style.color = '#5B6A46';
+      form.reset();
+      setGoing('');
+      guests = 1;
+      updateGuests();
+    } catch (err) {
+      feedback.textContent = 'Não conseguimos enviar agora. Tente novamente em instantes.';
+      feedback.style.color = '#BE7F55';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+    }
   });
 })();
 

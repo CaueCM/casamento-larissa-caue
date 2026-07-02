@@ -9,7 +9,14 @@ Publicado via GitHub Pages a partir da branch `main`.
 - `assets/css/style.css` — estilos (design tokens em `:root`)
 - `assets/js/main.js` — contagem regressiva, RSVP, FAQ, menu mobile, cópia da chave PIX
 
+## RSVP
+O formulário envia cada confirmação via `fetch` para um Google Apps Script implantado
+como Web App, que adiciona uma linha na aba "RSVP" da planilha "Planilha Geral
+Casamento" (colunas: Nome completo, Você vai comparecer?, Número de pessoas, Recado
+aos noivos, Timestamp). O endpoint está em `RSVP_ENDPOINT` no topo de
+`assets/js/main.js`. Se precisar trocar a planilha/script, é só atualizar essa URL.
+
 ## Pendências antes do grande dia
 - Trocar as fotos placeholder (hero, "nós dois", mapa, presentes) por fotos reais em `assets/img/`
 - Substituir a chave PIX de exemplo (`larissa.caue@casamento.com`) pela chave real
-- Conectar o formulário de RSVP a um backend (Formspree, Google Sheets via Apps Script, etc.) — ver comentário `TODO` em `assets/js/main.js`
+- Apagar as linhas de teste na aba RSVP da planilha (usadas para validar a integração)
