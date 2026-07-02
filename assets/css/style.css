@@ -224,13 +224,7 @@ a { color: inherit; }
 .countdown-num-accent { color: var(--sage); }
 .countdown-unit { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-tertiary); margin-top: 4px; }
 
-/* ===================== NOIVOS ===================== */
-.noivos { padding-top: 96px; }
-.noivos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-.noivos-photo { aspect-ratio: 1/1; border-radius: 22px; overflow: hidden; }
-.noivos-copy p { margin: 0 0 18px; font-size: 17px; line-height: 1.7; color: var(--text-secondary); }
-.noivos-copy p:last-of-type { margin-bottom: 0; }
-.chips { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+/* ===================== CHIPS ===================== */
 .chip { font-size: 13px; font-weight: 600; padding: 8px 15px; border-radius: 999px; }
 .chip-green { background: var(--chip-green-bg); color: var(--chip-green-fg); }
 .chip-terracota { background: var(--chip-terracota-bg); color: var(--chip-terracota-fg); }
@@ -465,9 +459,6 @@ a { color: inherit; }
   .countdown-label { text-align: center; }
   .countdown-items { justify-content: space-around; gap: 12px; }
   .countdown-num { font-size: 30px; }
-
-  .noivos { padding-top: 72px; }
-  .noivos-grid { grid-template-columns: 1fr; gap: 28px; }
 
   .local-section { margin-top: 72px; padding: 64px 0; }
   .local-grid { grid-template-columns: 1fr; }
