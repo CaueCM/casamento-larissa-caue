@@ -191,7 +191,7 @@ a { color: inherit; }
 
 .hero-photo-wrap { position: relative; }
 .hero-photo { aspect-ratio: 4/5; border-radius: 22px; overflow: hidden; }
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .save-the-date {
   position: absolute;
   bottom: -22px;
@@ -256,6 +256,16 @@ a { color: inherit; }
 .timeline-time { font-size: 13px; font-weight: 700; color: var(--terracota); }
 .timeline-title { font-size: 17px; font-weight: 600; margin-top: 2px; }
 .timeline-desc { font-size: 14px; color: var(--text-tertiary); }
+
+/* ===================== HOSPEDAGEM ===================== */
+.hospedagem { padding-top: 96px; }
+.hospedagem .section-head { margin-bottom: 20px; }
+.stay-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+.stay-card { border: 1px solid var(--border); border-radius: 20px; background: var(--surface); padding: 24px 26px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.stay-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 18px; margin-top: 4px; }
+.stay-desc { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); }
+.stay-meta { font-size: 14px; font-weight: 700; color: var(--olive); margin-top: auto; padding-top: 4px; }
+.stay-note { margin: 26px auto 0; font-size: 13px; color: var(--text-tertiary); text-align: center; max-width: 640px; }
 
 /* ===================== PRESENTES ===================== */
 .presentes { padding-top: 96px; }
@@ -463,6 +473,9 @@ a { color: inherit; }
 
   .local-section { margin-top: 72px; padding: 64px 0; }
   .local-grid { grid-template-columns: 1fr; }
+
+  .hospedagem { padding-top: 72px; }
+  .stay-grid { grid-template-columns: 1fr; }
 
   .presentes { padding-top: 72px; }
   .gifts-grid { grid-template-columns: 1fr; }
