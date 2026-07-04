@@ -236,7 +236,8 @@ a { color: inherit; }
 .local-section { background: var(--beige); margin-top: 96px; padding: 88px 0; }
 .local-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; align-items: stretch; }
 .map-card { border: 1px solid var(--border); border-radius: 22px; overflow: hidden; background: var(--surface); display: flex; flex-direction: column; }
-.map-placeholder { flex: 1; min-height: 280px; }
+.map-embed { flex: 1; min-height: 280px; }
+.map-embed iframe { width: 100%; height: 100%; display: block; }
 .map-footer { padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .map-footer-title { font-size: 15px; font-weight: 600; }
 .map-footer-sub { font-size: 13px; color: var(--text-tertiary); margin-top: 2px; }
@@ -272,7 +273,13 @@ a { color: inherit; }
 .presentes .section-head { margin-bottom: 20px; }
 .gifts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
 .gift-card { border: 1px solid var(--border); border-radius: 20px; background: var(--surface); overflow: hidden; }
-.gift-img { height: 150px; }
+.gift-emoji { height: 150px; display: flex; align-items: center; justify-content: center; font-size: 64px; }
+.gift-emoji-a { background: var(--chip-green-bg); }
+.gift-emoji-b { background: var(--chip-terracota-bg); }
+.gift-emoji-c { background: var(--chip-purple-bg); }
+.gift-emoji-d { background: #EAF0EF; }
+.gift-emoji-e { background: #F5EFE0; }
+.gift-emoji-f { background: #F0E9E2; }
 .gift-body { padding: 22px 24px; }
 .gift-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
 .gift-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 18px; }
