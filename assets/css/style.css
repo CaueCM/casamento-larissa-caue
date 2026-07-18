@@ -261,22 +261,20 @@ a { color: inherit; }
 .dresscode-note { margin: 26px auto 0; font-size: 13px; color: var(--text-tertiary); text-align: center; max-width: 640px; }
 
 /* ===================== INSPIRAÇÕES ===================== */
-.inspiracoes { padding-top: 64px; }
-.inspiracoes .section-head { margin-bottom: 20px; }
+.inspiracoes-section { background: var(--beige); margin-top: 64px; padding: 60px 0; }
+.inspiracoes-section .section-head { margin-bottom: 20px; }
 .pinterest-embed { margin-top: 40px; display: flex; justify-content: center; overflow-x: auto; }
 
 /* ===================== HOSPEDAGEM ===================== */
 .hospedagem { padding-top: 64px; }
-.hospedagem .section-head { margin-bottom: 20px; }
-.stay-single { display: flex; justify-content: center; margin-top: 40px; }
-.stay-card { border: 1px solid var(--border); border-radius: 20px; background: var(--surface); padding: 28px 30px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; max-width: 460px; width: 100%; }
-.stay-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 18px; margin-top: 4px; }
-.stay-desc { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); }
-.stay-note { margin: 26px auto 0; font-size: 13px; color: var(--text-tertiary); text-align: center; max-width: 640px; }
+.hospedagem-content { max-width: 620px; margin: 40px auto 0; text-align: center; }
+.hospedagem-content p { font-size: 16px; line-height: 1.7; color: var(--text-secondary); margin: 0 0 18px; }
+.hospedagem-content .btn { margin-top: 8px; }
+.hospedagem-content .hospedagem-note { margin: 26px 0 0; font-size: 13px; color: var(--text-tertiary); }
 
 /* ===================== PRESENTES ===================== */
-.presentes { padding-top: 64px; }
-.presentes .section-head { margin-bottom: 20px; }
+.presentes-section { background: var(--beige); margin-top: 64px; padding: 60px 0; }
+.presentes-section .section-head { margin-bottom: 20px; }
 .gifts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
 .gift-card { border: 1px solid var(--border); border-radius: 20px; background: var(--surface); overflow: hidden; }
 .gift-emoji { height: 150px; display: flex; align-items: center; justify-content: center; font-size: 64px; overflow: hidden; }
@@ -293,6 +291,7 @@ a { color: inherit; }
 .gift-sub { font-size: 13px; color: var(--text-tertiary); margin-top: 2px; }
 .gift-price { background: var(--chip-green-bg); color: var(--chip-green-fg); font-size: 15px; font-weight: 700; padding: 6px 12px; border-radius: 10px; white-space: nowrap; }
 .gift-btn { margin-top: 18px; }
+.gift-btn-card { width: 100%; font-size: 14px; padding: 11px 0; margin-top: 10px; }
 
 .pix-box {
   margin-top: 26px;
@@ -531,11 +530,11 @@ a { color: inherit; }
   .traje { padding-top: 56px; }
   .dresscode-grid { grid-template-columns: 1fr; }
 
-  .inspiracoes { padding-top: 56px; }
+  .inspiracoes-section { margin-top: 56px; padding: 48px 0; }
 
   .hospedagem { padding-top: 56px; }
 
-  .presentes { padding-top: 56px; }
+  .presentes-section { margin-top: 56px; padding: 48px 0; }
   .gifts-grid { grid-template-columns: 1fr; }
 
   .rsvp-section { margin-top: 56px; padding: 48px 0; }
