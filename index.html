@@ -19,9 +19,10 @@
     <a href="#inicio" class="nav-logo">L <span class="accent">&amp;</span> C</a>
     <nav class="nav-links" id="navLinks">
       <a href="#local">Local &amp; dia</a>
+      <a href="#traje">Traje</a>
+      <a href="#inspiracoes">Inspirações</a>
       <a href="#hospedagem">Hospedagem</a>
       <a href="#presentes">Presentes</a>
-      <a href="#novidades">Novidades</a>
       <a href="#faq">Dúvidas</a>
       <a href="#rsvp" class="btn btn-primary nav-cta-mobile">Confirmar presença</a>
     </nav>
@@ -38,7 +39,7 @@
     <div class="hero-copy">
       <div class="eyebrow">Vamos casar</div>
       <h1 class="hero-title">Larissa<br><span class="amp">&amp;</span> Cauê</h1>
-      <p class="hero-text">Depois de seis anos e muitas estradas, a gente vai dizer sim no meio do mato que a gente ama. Vem com a gente.</p>
+      <p class="hero-text">Depois de 8 anos juntos, mais de 5 morando na mesma casa (com 3 gatos de testemunha) e 1 ano de noivado, a gente vai dizer sim no meio do mato que a gente ama. Vem com a gente.</p>
       <div class="hero-meta">
         <span class="hero-meta-item">24 de abril de 2027</span>
         <span class="dot"></span>
@@ -51,7 +52,7 @@
     </div>
     <div class="hero-photo-wrap">
       <div class="hero-photo">
-        <img src="assets/img/casal-hero.jpg" alt="Larissa e Cauê abraçados" loading="eager">
+        <img src="assets/img/casal-hero.jpg" alt="Larissa mostrando o anel de noivado ao lado de Cauê" loading="eager">
       </div>
       <div class="save-the-date">
         <div class="std-label">Save the Date</div>
@@ -86,43 +87,60 @@
           <iframe src="https://www.google.com/maps?q=Rancho+Santa+Maria+Eventos+Pirucaia+Mairipora+SP&output=embed" width="100%" height="100%" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de como chegar ao Rancho Santa Maria"></iframe>
         </div>
         <div class="map-footer">
-          <div>
-            <div class="map-footer-title">Como chegar</div>
-            <div class="map-footer-sub">Estacionamento gratuito no local</div>
-          </div>
-          <a href="https://maps.google.com/?q=Rancho+Santa+Maria+Eventos+Pirucaia+Mairiporã+SP" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Abrir no mapa</a>
+          <div class="map-footer-sub">Estacionamento gratuito no local</div>
         </div>
       </div>
-      <div class="schedule-card">
-        <div class="schedule-label">Cronograma do dia</div>
-        <div class="timeline">
-          <div class="timeline-row">
-            <div class="timeline-marker"><span class="dot-filled dot-green"></span><span class="timeline-line"></span></div>
-            <div class="timeline-content">
-              <div class="timeline-time">16h00</div>
-              <div class="timeline-title">Cerimônia</div>
-              <div class="timeline-desc">No jardim, à luz do fim de tarde</div>
-            </div>
-          </div>
-          <div class="timeline-row">
-            <div class="timeline-marker"><span class="dot-filled dot-sage"></span><span class="timeline-line"></span></div>
-            <div class="timeline-content">
-              <div class="timeline-time">17h30</div>
-              <div class="timeline-title">Coquetel</div>
-              <div class="timeline-desc">Boas-vindas, brindes e fotos</div>
-            </div>
-          </div>
-          <div class="timeline-row">
-            <div class="timeline-marker"><span class="dot-outline"></span></div>
-            <div class="timeline-content">
-              <div class="timeline-time">19h00</div>
-              <div class="timeline-title">Festa</div>
-              <div class="timeline-desc">Jantar e pista até a meia-noite (00h)</div>
-            </div>
-          </div>
-        </div>
+      <div class="quando-card">
+        <div class="quando-time-label">Horário da cerimônia</div>
+        <div class="quando-time">16h00</div>
+        <p class="quando-hint">Chegue com uns 15 minutos de antecedência — a entrada é pontual.</p>
+        <div class="quando-divider"></div>
+        <div class="quando-address-label">Endereço completo</div>
+        <p class="quando-address">Alameda dos Gerânios, Condomínio Jardim Cinco Lagos<br>Pirucaia, Mairiporã/SP</p>
+        <a href="https://maps.google.com/?q=Rancho+Santa+Maria+Eventos+Pirucaia+Mairiporã+SP" target="_blank" rel="noopener" class="btn btn-primary quando-cta">Abrir no mapa</a>
+        <button type="button" class="btn btn-outline quando-cta" id="addToCalendarBtn">Adicionar à agenda</button>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===================== TRAJE / DRESS CODE ===================== -->
+<section id="traje" class="section-max traje">
+  <div class="section-head">
+    <div class="eyebrow">Dress code</div>
+    <h2 class="section-title">Vista-se assim</h2>
+    <p class="section-sub section-sub-wide">Esporte fino e confortável — a cerimônia é num jardim de grama, ao ar livre e no fim de tarde. Queremos vocês bonitos, mas sem sofrer: tênis está liberadíssimo.</p>
+  </div>
+  <div class="dresscode-grid">
+    <div class="dresscode-card">
+      <span class="chip chip-terracota chip-tag">Para elas</span>
+      <ul class="dresscode-list">
+        <li>Vestido midi ou longo, macacão ou conjunto — tecidos leves como linho e viscose caem bem no fim de tarde.</li>
+        <li>Salto fino não é a melhor ideia na grama. Aposte em sandália rasteira, anabela, plataforma ou tênis.</li>
+        <li>Leve uma jaqueta ou xale leve para depois que o sol se põe — abril esfria à noite.</li>
+      </ul>
+    </div>
+    <div class="dresscode-card">
+      <span class="chip chip-green chip-tag">Para eles</span>
+      <ul class="dresscode-list">
+        <li>Calça social ou chino com camisa, polo ou camisa manga curta — blazer é bem-vindo, mas opcional.</li>
+        <li>Tênis (aquele limpinho, guardado pra ocasião) combina numa boa com esporte fino. Sapato também vai bem, só evite solado que afunda na grama.</li>
+        <li>Uma peça de manga longa ou blazer ajuda na virada da noite, quando esfria.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="dresscode-note">Cores à vontade — só pedimos para fugir do branco e do off-white, de respeito à noiva. 🌿</p>
+</section>
+
+<!-- ===================== INSPIRAÇÕES / PINTEREST ===================== -->
+<section id="inspiracoes" class="section-max inspiracoes">
+  <div class="section-head">
+    <div class="eyebrow">Inspirações</div>
+    <h2 class="section-title">Nosso mural de referências</h2>
+    <p class="section-sub section-sub-wide">Separamos no Pinterest o clima que a gente imagina pro grande dia — decoração, paleta, tudo. Dá uma espiada!</p>
+  </div>
+  <div class="pinterest-embed">
+    <a data-pin-do="embedBoard" data-pin-board-width="1100" data-pin-scale-height="240" data-pin-scale-width="80" href="https://br.pinterest.com/caumuriano/casamento-lari-e-cau%C3%AA/"></a>
   </div>
 </section>
 
@@ -131,28 +149,17 @@
   <div class="section-head">
     <div class="eyebrow">Hospedagem</div>
     <h2 class="section-title">Onde se hospedar</h2>
-    <p class="section-sub section-sub-wide">O Rancho fica dentro do Condomínio Jardim Cinco Lagos, em Pirucaia. Além da hospedagem no próprio local, há opções de Airbnb e pousada a poucos minutos da festa.</p>
+    <p class="section-sub section-sub-wide">O Rancho fica dentro do Condomínio Jardim Cinco Lagos, em Pirucaia.</p>
   </div>
-  <div class="stay-grid">
+  <div class="stay-single">
     <div class="stay-card">
-      <span class="chip chip-green chip-tag">No local</span>
-      <div class="stay-title">Hospedagem no Ranchinho</div>
-      <div class="stay-desc">Estrutura do próprio Rancho Santa Maria, com piscina e área de lazer — acomoda até 48 convidados, com 3 dias de hospedagem inclusos.</div>
-      <div class="stay-meta">R$ 300 por pessoa</div>
-    </div>
-    <div class="stay-card">
-      <span class="chip chip-terracota chip-tag">Airbnb</span>
-      <div class="stay-title">Chácara Condomínio Cinco Lagos</div>
-      <div class="stay-desc">Casa inteira dentro do mesmo condomínio do Rancho — ideal pra quem prefere ficar em grupo, a poucos minutos da festa.</div>
-      <a href="https://www.airbnb.com/rooms/991489240454012088" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Ver no Airbnb</a>
-    </div>
-    <div class="stay-card">
-      <span class="chip chip-purple chip-tag">Pousada</span>
-      <div class="stay-title">Pousada Sua Casita</div>
-      <div class="stay-desc">Pousada também dentro do Jardim Cinco Lagos, na Alameda dos Pinheiros — boa opção pra quem prefere um quarto avulso.</div>
+      <span class="chip chip-terracota chip-tag">Recomendado</span>
+      <div class="stay-title">Fique no Condomínio Cinco Lagos</div>
+      <div class="stay-desc">O Rancho fica dentro desse condomínio — por isso recomendamos se hospedar ali também. Assim dá pra brindar à vontade e curtir a festa sem se preocupar com o caminho de volta.</div>
+      <a href="https://www.airbnb.com.br/s/Condom%C3%ADnio-Cinco-Lagos--Mairipor%C3%A3--SP/homes?checkin=2027-04-23&checkout=2027-04-25&adults=2&place_id=ChIJ6arYiWjtzpQROHGemzpGfy8&search_by_map=true&ne_lat=-23.264073056672704&ne_lng=-46.49138066173251&sw_lat=-23.338551146985537&sw_lng=-46.57930667118214" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Ver acomodações no Airbnb</a>
     </div>
   </div>
-  <p class="stay-note">Não temos convênio com nenhuma opção — os valores e a disponibilidade podem mudar, confirme direto com cada anfitrião antes de reservar.</p>
+  <p class="stay-note">Não temos convênio com o Airbnb — os valores e a disponibilidade podem mudar, confirme direto com o anfitrião antes de reservar.</p>
 </section>
 
 <!-- ===================== PRESENTES ===================== -->
@@ -164,7 +171,7 @@
   </div>
   <div class="gifts-grid">
     <div class="gift-card">
-      <div class="gift-emoji gift-emoji-a">🧊</div>
+      <div class="gift-emoji gift-emoji-a"><img src="assets/img/gifts/gelo.webp" alt="Gelo pra galera" loading="lazy"></div>
       <div class="gift-body">
         <div class="gift-top">
           <div>
@@ -173,102 +180,89 @@
           </div>
           <div class="gift-price">R$ 50</div>
         </div>
-        <button class="btn btn-terracota gift-btn" data-pix-btn>Presentear via PIX</button>
+        <button class="btn btn-terracota gift-btn" data-pix-btn data-amount="50">Presentear via PIX</button>
       </div>
     </div>
     <div class="gift-card">
-      <div class="gift-emoji gift-emoji-b">🦻</div>
+      <div class="gift-emoji gift-emoji-b"><img src="assets/img/gifts/forro.jpg" alt="Aula de forró" loading="lazy"></div>
       <div class="gift-body">
         <div class="gift-top">
           <div>
-            <div class="gift-title">Kit tampão de ouvido</div>
-            <div class="gift-sub">Pro Cauê aguentar o próprio ronco</div>
+            <div class="gift-title">Aula de forró</div>
+            <div class="gift-sub">Pro Cauê continuar treinando o passo que conquistou a Larissa</div>
           </div>
           <div class="gift-price">R$ 100</div>
         </div>
-        <button class="btn btn-terracota gift-btn" data-pix-btn>Presentear via PIX</button>
+        <button class="btn btn-terracota gift-btn" data-pix-btn data-amount="100">Presentear via PIX</button>
       </div>
     </div>
     <div class="gift-card">
-      <div class="gift-emoji gift-emoji-c">🍝</div>
+      <div class="gift-emoji gift-emoji-c"><img src="assets/img/gifts/japones.jpg" alt="Rodízio japonês de sexta" loading="lazy"></div>
       <div class="gift-body">
         <div class="gift-top">
           <div>
-            <div class="gift-title">Jantar de segunda-feira</div>
-            <div class="gift-sub">Aquele dia que ninguém cozinha</div>
+            <div class="gift-title">Rodízio japonês de sexta</div>
+            <div class="gift-sub">Prato oficial da maratona de série no sofá</div>
           </div>
           <div class="gift-price">R$ 250</div>
         </div>
-        <button class="btn btn-terracota gift-btn" data-pix-btn>Presentear via PIX</button>
+        <button class="btn btn-terracota gift-btn" data-pix-btn data-amount="250">Presentear via PIX</button>
       </div>
     </div>
     <div class="gift-card">
-      <div class="gift-emoji gift-emoji-d">🍖</div>
+      <div class="gift-emoji gift-emoji-d"><img src="assets/img/gifts/gato.jpg" alt="Ração e areia sanitária" loading="lazy"></div>
       <div class="gift-body">
         <div class="gift-top">
           <div>
-            <div class="gift-title">Churrasco de fim de semana</div>
-            <div class="gift-sub">Carvão, carne e a Nina de olho</div>
+            <div class="gift-title">Ração e areia sanitária</div>
+            <div class="gift-sub">Pro Gobô, Brad e Mizu não fazerem greve</div>
           </div>
           <div class="gift-price">R$ 500</div>
         </div>
-        <button class="btn btn-terracota gift-btn" data-pix-btn>Presentear via PIX</button>
+        <button class="btn btn-terracota gift-btn" data-pix-btn data-amount="500">Presentear via PIX</button>
       </div>
     </div>
     <div class="gift-card">
-      <div class="gift-emoji gift-emoji-e">⛽</div>
+      <div class="gift-emoji gift-emoji-e"><img src="assets/img/gifts/airbnb.jpg" alt="Diária em Airbnb local" loading="lazy"></div>
       <div class="gift-body">
         <div class="gift-top">
           <div>
-            <div class="gift-title">Tanque cheio pra próxima trilha</div>
-            <div class="gift-sub">Gasolina + café de posto</div>
+            <div class="gift-title">Diária em Airbnb local</div>
+            <div class="gift-sub">Nosso programa preferido de fim de semana</div>
           </div>
           <div class="gift-price">R$ 1.000</div>
         </div>
-        <button class="btn btn-terracota gift-btn" data-pix-btn>Presentear via PIX</button>
+        <button class="btn btn-terracota gift-btn" data-pix-btn data-amount="1000">Presentear via PIX</button>
       </div>
     </div>
     <div class="gift-card">
-      <div class="gift-emoji gift-emoji-f">☕</div>
+      <div class="gift-emoji gift-emoji-f"><img src="assets/img/gifts/magic.webp" alt="Coleção de Magic: The Gathering" loading="lazy"></div>
       <div class="gift-body">
         <div class="gift-top">
           <div>
-            <div class="gift-title">Cafeteira que não é sofrimento</div>
-            <div class="gift-sub">Fim da briga de manhã por causa do pó</div>
+            <div class="gift-title">Coleção de Magic: The Gathering</div>
+            <div class="gift-sub">Fundo de investimento nerd do Cauê</div>
           </div>
           <div class="gift-price">R$ 2.500</div>
         </div>
-        <button class="btn btn-terracota gift-btn" data-pix-btn>Presentear via PIX</button>
+        <button class="btn btn-terracota gift-btn" data-pix-btn data-amount="2500">Presentear via PIX</button>
       </div>
     </div>
     <div class="gift-card">
-      <div class="gift-emoji gift-emoji-a">🏝️</div>
+      <div class="gift-emoji gift-emoji-a"><img src="assets/img/gifts/lua-de-mel.jpg" alt="Lua de mel" loading="lazy"></div>
       <div class="gift-body">
         <div class="gift-top">
           <div>
-            <div class="gift-title">Diária em Noronha</div>
+            <div class="gift-title">Lua de mel</div>
             <div class="gift-sub">Nossa lua de mel</div>
           </div>
           <div class="gift-price">R$ 5.000</div>
         </div>
-        <button class="btn btn-terracota gift-btn" data-pix-btn>Presentear via PIX</button>
+        <button class="btn btn-terracota gift-btn" data-pix-btn data-amount="5000">Presentear via PIX</button>
       </div>
     </div>
     <div class="gift-card">
-      <div class="gift-emoji gift-emoji-b">🛋️</div>
-      <div class="gift-body">
-        <div class="gift-top">
-          <div>
-            <div class="gift-title">Sofá que aguenta os dois + Nina</div>
-            <div class="gift-sub">Prometemos não comer pipoca em cima</div>
-          </div>
-          <div class="gift-price">R$ 10.000</div>
-        </div>
-        <button class="btn btn-terracota gift-btn" data-pix-btn>Presentear via PIX</button>
-      </div>
-    </div>
-    <div class="gift-card">
-      <div class="gift-emoji gift-emoji-c">🏡</div>
+      <div class="gift-emoji gift-emoji-b"><img src="assets/img/gifts/ape.jpeg" alt="Entrada do apê" loading="lazy"></div>
       <div class="gift-body">
         <div class="gift-top">
           <div>
@@ -277,7 +271,20 @@
           </div>
           <div class="gift-price">R$ 25.000</div>
         </div>
-        <button class="btn btn-terracota gift-btn" data-pix-btn>Presentear via PIX</button>
+        <button class="btn btn-terracota gift-btn" data-pix-btn data-amount="25000">Presentear via PIX</button>
+      </div>
+    </div>
+    <div class="gift-card">
+      <div class="gift-emoji gift-emoji-c"><img src="assets/img/gifts/lua-de-mel-noivos.jpg" alt="Ir para a lua de mel com os noivos" loading="lazy"></div>
+      <div class="gift-body">
+        <div class="gift-top">
+          <div>
+            <div class="gift-title">Ir para a lua de mel com os noivos</div>
+            <div class="gift-sub">Bilhete extra pra lua de mel — quarto separado, prometemos</div>
+          </div>
+          <div class="gift-price">R$ 50.000</div>
+        </div>
+        <button class="btn btn-terracota gift-btn" data-pix-btn data-amount="50000">Presentear via PIX</button>
       </div>
     </div>
     <div class="gift-card">
@@ -295,9 +302,26 @@
     </div>
   </div>
   <div class="pix-box">
-    <span class="pix-label">Chave PIX dos noivos:</span>
-    <span class="pix-key" id="pixKey">larissa.caue@casamento.com</span>
-    <button class="pix-copy" id="pixCopyBtn" title="Copiar chave PIX">Copiar</button>
+    <span class="pix-label">PIX Copia e Cola:</span>
+    <span class="pix-key" id="pixKey" data-code="00020126580014BR.GOV.BCB.PIX013648a84e9d-7fb8-4da1-98aa-3117bf81b29f5204000053039865802BR5922Caue Cimorelli Muriano6009SAO PAULO62140510ey1HYn0JJz6304BF28">Código para colar no app do banco</span>
+    <button class="pix-copy" id="pixCopyBtn" title="Copiar código PIX">Copiar</button>
+  </div>
+
+  <div class="pix-modal-overlay" id="pixModalOverlay" hidden>
+    <div class="pix-modal" role="dialog" aria-modal="true" aria-labelledby="pixModalTitle">
+      <button class="pix-modal-close" id="pixModalClose" aria-label="Fechar">&times;</button>
+      <div class="eyebrow">Presentear via PIX</div>
+      <h3 class="pix-modal-title" id="pixModalTitle">Gelo pra galera</h3>
+      <div class="pix-modal-price" id="pixModalPrice">R$ 50</div>
+      <img class="pix-modal-qr" id="pixModalQr" src="" alt="QR Code PIX" hidden>
+      <p class="pix-modal-note" id="pixModalNote" hidden>Escolha o valor que quiser e use o código PIX abaixo.</p>
+      <p class="pix-modal-hint" id="pixModalHint">Abra o app do seu banco e escaneie o QR Code, ou copie o código abaixo.</p>
+      <div class="pix-box pix-box-modal">
+        <span class="pix-label">PIX Copia e Cola:</span>
+        <span class="pix-key" id="pixModalKey" data-code="00020126580014BR.GOV.BCB.PIX013648a84e9d-7fb8-4da1-98aa-3117bf81b29f5204000053039865802BR5922Caue Cimorelli Muriano6009SAO PAULO62140510ey1HYn0JJz6304BF28">Código para colar no app do banco</span>
+        <button class="pix-copy" id="pixModalCopyBtn" title="Copiar código PIX">Copiar</button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -344,40 +368,6 @@
   </div>
 </section>
 
-<!-- ===================== NOVIDADES ===================== -->
-<section id="novidades" class="section-max novidades">
-  <div class="section-head">
-    <div class="eyebrow">Atualizações</div>
-    <h2 class="section-title">Novidades</h2>
-  </div>
-  <div class="news-grid">
-    <div class="news-card">
-      <div class="news-top">
-        <span class="chip chip-purple chip-tag">Hospedagem</span>
-        <span class="news-date">12 jun</span>
-      </div>
-      <div class="news-title">Pousada com desconto</div>
-      <p class="news-text">Fechamos valores especiais na pousada mais próxima do rancho para quem vem de longe. Vagas limitadas.</p>
-    </div>
-    <div class="news-card">
-      <div class="news-top">
-        <span class="chip chip-terracota chip-tag">Transporte</span>
-        <span class="news-date">28 mai</span>
-      </div>
-      <div class="news-title">Van saindo de SP</div>
-      <p class="news-text">Vamos organizar uma van do metrô Tucuruvi até o rancho. Marque no RSVP se quiser vaga.</p>
-    </div>
-    <div class="news-card">
-      <div class="news-top">
-        <span class="chip chip-green chip-tag">Save the date</span>
-        <span class="news-date">02 mai</span>
-      </div>
-      <div class="news-title">O site está no ar!</div>
-      <p class="news-text">Agora é oficial. Salve a data, confirme presença e acompanhe as novidades por aqui.</p>
-    </div>
-  </div>
-</section>
-
 <!-- ===================== FAQ ===================== -->
 <section id="faq" class="faq-max faq">
   <div class="section-head">
@@ -400,7 +390,7 @@
         <span class="faq-sign">+</span>
       </button>
       <div class="faq-answer">
-        <p>Esporte fino, pensando que a cerimônia é ao ar livre e no fim de tarde. Salto fino não é a melhor ideia na grama — aposte em algo confortável.</p>
+        <p>Esporte fino e confortável, com sugestões detalhadas pra elas e pra eles na seção <a href="#traje">Traje</a>, logo acima. Tênis é super bem-vindo!</p>
       </div>
     </div>
     <div class="faq-item" data-open="false">
@@ -409,7 +399,7 @@
         <span class="faq-sign">+</span>
       </button>
       <div class="faq-answer">
-        <p>Tem, gratuito e dentro do rancho. Também vamos organizar uma van saindo de São Paulo — fique de olho nas Novidades.</p>
+        <p>Tem, gratuito e dentro do rancho.</p>
       </div>
     </div>
     <div class="faq-item" data-open="false">
@@ -427,7 +417,7 @@
         <span class="faq-sign">+</span>
       </button>
       <div class="faq-answer">
-        <p>O Rancho fica no Condomínio Jardim Cinco Lagos, em Pirucaia (Mairiporã). Tem hospedagem no próprio local para até 48 pessoas, além de opções de Airbnb e pousada ali perto — veja tudo na seção Hospedagem.</p>
+        <p>O Rancho fica no Condomínio Jardim Cinco Lagos, em Pirucaia (Mairiporã). Recomendamos se hospedar no mesmo condomínio, via Airbnb — veja o link na seção Hospedagem.</p>
       </div>
     </div>
   </div>
@@ -449,5 +439,6 @@
 </footer>
 
 <script src="assets/js/main.js"></script>
+<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
 </body>
 </html>

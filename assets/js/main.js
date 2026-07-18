@@ -17,6 +17,41 @@
   });
 })();
 
+// ===================== ADD TO CALENDAR ===================== //
+(function () {
+  const btn = document.getElementById('addToCalendarBtn');
+  if (!btn) return;
+
+  btn.addEventListener('click', () => {
+    const ics = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//Larissa e Cauê//Casamento//PT-BR',
+      'CALSCALE:GREGORIAN',
+      'BEGIN:VEVENT',
+      'UID:larissa-caue-casamento-24042027@laricasacomocaue',
+      'DTSTAMP:20260718T120000Z',
+      'DTSTART:20270424T190000Z',
+      'DTEND:20270425T030000Z',
+      'SUMMARY:Casamento de Larissa & Cauê',
+      'DESCRIPTION:Cerimônia às 16h no Rancho Santa Maria. Chegue com uns 15 minutos de antecedência — a entrada é pontual.',
+      'LOCATION:Rancho Santa Maria - Alameda dos Gerânios\\, Condomínio Jardim Cinco Lagos\\, Pirucaia\\, Mairiporã/SP',
+      'END:VEVENT',
+      'END:VCALENDAR',
+    ].join('\r\n');
+
+    const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'casamento-larissa-caue.ics';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  });
+})();
+
 // ===================== COUNTDOWN ===================== //
 (function () {
   const target = new Date('2027-04-24T16:00:00-03:00').getTime();
@@ -164,26 +199,74 @@
 (function () {
   const copyBtn = document.getElementById('pixCopyBtn');
   const pixKey = document.getElementById('pixKey');
-  const giftBtns = document.querySelectorAll('[data-pix-btn]');
   if (!copyBtn || !pixKey) return;
 
-  function copyKey() {
-    const text = pixKey.textContent.trim();
-    navigator.clipboard.writeText(text).then(() => {
-      copyBtn.textContent = 'Copiado!';
-      copyBtn.classList.add('copied');
-      setTimeout(() => {
-        copyBtn.textContent = 'Copiar';
-        copyBtn.classList.remove('copied');
-      }, 1800);
-    });
+  copyBtn.addEventListener('click', () => copyToClipboard(pixKey.dataset.code, copyBtn));
+})();
+
+function copyToClipboard(text, btn) {
+  navigator.clipboard.writeText(text).then(() => {
+    const original = btn.textContent;
+    btn.textContent = 'Copiado!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = original;
+      btn.classList.remove('copied');
+    }, 1800);
+  });
+}
+
+// ===================== PIX MODAL ===================== //
+(function () {
+  const overlay = document.getElementById('pixModalOverlay');
+  const closeBtn = document.getElementById('pixModalClose');
+  const titleEl = document.getElementById('pixModalTitle');
+  const priceEl = document.getElementById('pixModalPrice');
+  const qrEl = document.getElementById('pixModalQr');
+  const noteEl = document.getElementById('pixModalNote');
+  const hintEl = document.getElementById('pixModalHint');
+  const modalKey = document.getElementById('pixModalKey');
+  const modalCopyBtn = document.getElementById('pixModalCopyBtn');
+  const giftBtns = document.querySelectorAll('[data-pix-btn]');
+  if (!overlay) return;
+
+  function openModal(btn) {
+    const card = btn.closest('.gift-card');
+    const title = card.querySelector('.gift-title').textContent;
+    const price = card.querySelector('.gift-price').textContent;
+    const amount = btn.getAttribute('data-amount');
+
+    titleEl.textContent = title;
+    priceEl.textContent = price;
+
+    if (amount) {
+      qrEl.src = `assets/img/pix/qrcode-pix${amount}.png`;
+      qrEl.alt = `QR Code PIX de ${price}`;
+      qrEl.hidden = false;
+      noteEl.hidden = true;
+      hintEl.hidden = false;
+    } else {
+      qrEl.hidden = true;
+      noteEl.hidden = false;
+      hintEl.hidden = true;
+    }
+
+    overlay.hidden = false;
+    document.body.style.overflow = 'hidden';
   }
 
-  copyBtn.addEventListener('click', copyKey);
-  giftBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      document.getElementById('presentes').scrollIntoView({ behavior: 'smooth', block: 'end' });
-      copyKey();
-    });
+  function closeModal() {
+    overlay.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  giftBtns.forEach((btn) => btn.addEventListener('click', () => openModal(btn)));
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeModal();
   });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !overlay.hidden) closeModal();
+  });
+  modalCopyBtn.addEventListener('click', () => copyToClipboard(modalKey.dataset.code, modalCopyBtn));
 })();
