@@ -31,10 +31,10 @@
       'BEGIN:VEVENT',
       'UID:larissa-caue-casamento-24042027@laricasacomocaue',
       'DTSTAMP:20260718T120000Z',
-      'DTSTART:20270424T190000Z',
-      'DTEND:20270425T030000Z',
+      'DTSTART;VALUE=DATE:20270424',
+      'DTEND;VALUE=DATE:20270425',
       'SUMMARY:Casamento de Larissa & Cauê',
-      'DESCRIPTION:Cerimônia às 16h no Rancho Santa Maria. Chegue com uns 15 minutos de antecedência — a entrada é pontual.',
+      'DESCRIPTION:Horário a definir — avisaremos em breve. Local: Rancho Santa Maria.',
       'LOCATION:Rancho Santa Maria - Alameda dos Gerânios\\, Condomínio Jardim Cinco Lagos\\, Pirucaia\\, Mairiporã/SP',
       'END:VEVENT',
       'END:VCALENDAR',
@@ -54,7 +54,7 @@
 
 // ===================== COUNTDOWN ===================== //
 (function () {
-  const target = new Date('2027-04-24T16:00:00-03:00').getTime();
+  const target = new Date('2027-04-24T00:00:00-03:00').getTime();
   const daysEl = document.getElementById('cd-days');
   const hoursEl = document.getElementById('cd-hours');
   const minsEl = document.getElementById('cd-mins');

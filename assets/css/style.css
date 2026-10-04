@@ -244,6 +244,9 @@ a { color: inherit; }
 .quando-card { border: 1px solid var(--border); border-radius: 22px; background: var(--surface); padding: 32px; display: flex; flex-direction: column; }
 .quando-time-label, .quando-address-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 600; }
 .quando-time { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 500; font-size: 56px; line-height: 1; color: var(--olive); margin-top: 10px; }
+.quando-date-year { font-size: 15px; font-weight: 600; color: var(--text-secondary); margin: 10px 0 0; }
+.quando-time-label-spaced { margin-top: 24px; }
+.quando-time-tbd { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 500; font-size: 30px; line-height: 1; color: var(--terracota); margin-top: 10px; }
 .quando-hint { font-size: 14px; color: var(--text-secondary); margin: 14px 0 0; line-height: 1.5; }
 .quando-divider { height: 1px; background: var(--border); margin: 26px 0; }
 .quando-address { font-size: 16px; font-weight: 600; color: var(--text-primary); line-height: 1.5; margin: 10px 0 0; }
