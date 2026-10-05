@@ -261,22 +261,33 @@ a { color: inherit; }
 .dresscode-list { margin: 18px 0 0; padding-left: 20px; }
 .dresscode-list li { font-size: 14.5px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 12px; }
 .dresscode-list li:last-child { margin-bottom: 0; }
-.dresscode-note { margin: 26px auto 0; font-size: 13px; color: var(--text-tertiary); text-align: center; max-width: 640px; }
+
+/* ===================== CORES ===================== */
+.cores-section { background: var(--beige); margin-top: 64px; padding: 60px 0; }
+.cores-section .section-head { margin-bottom: 20px; }
+.swatches { display: flex; gap: 10px; margin-top: 18px; }
+.swatch { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border); display: inline-block; }
+.swatch-olive { background: var(--olive); }
+.swatch-sage { background: var(--sage); }
+.swatch-sand { background: #D9C7A3; }
+.swatch-white { background: #FFFFFF; }
+.cores-text { margin: 16px 0 0; font-size: 14.5px; line-height: 1.7; color: var(--text-secondary); }
 
 /* ===================== INSPIRAÇÕES ===================== */
-.inspiracoes-section { background: var(--beige); margin-top: 64px; padding: 60px 0; }
+.inspiracoes-section { padding: 0; }
 .inspiracoes-section .section-head { margin-bottom: 20px; }
 .pinterest-embed { margin-top: 40px; display: flex; justify-content: center; overflow-x: auto; }
 
 /* ===================== HOSPEDAGEM ===================== */
-.hospedagem { padding-top: 64px; }
+.hospedagem-section { background: var(--beige); margin-top: 64px; padding: 60px 0; }
+.hospedagem-section .section-head { margin-bottom: 20px; }
 .hospedagem-content { max-width: 620px; margin: 40px auto 0; text-align: center; }
 .hospedagem-content p { font-size: 16px; line-height: 1.7; color: var(--text-secondary); margin: 0 0 18px; }
 .hospedagem-content .btn { margin-top: 8px; }
 .hospedagem-content .hospedagem-note { margin: 26px 0 0; font-size: 13px; color: var(--text-tertiary); }
 
 /* ===================== PRESENTES ===================== */
-.presentes-section { background: var(--beige); margin-top: 64px; padding: 60px 0; }
+.presentes-section { padding: 0; }
 .presentes-section .section-head { margin-bottom: 20px; }
 .gifts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
 .gift-card { border: 1px solid var(--border); border-radius: 20px; background: var(--surface); overflow: hidden; }
@@ -533,11 +544,10 @@ a { color: inherit; }
   .traje { padding-top: 56px; }
   .dresscode-grid { grid-template-columns: 1fr; }
 
-  .inspiracoes-section { margin-top: 56px; padding: 48px 0; }
+  .cores-section { margin-top: 56px; padding: 48px 0; }
 
-  .hospedagem { padding-top: 56px; }
+  .hospedagem-section { margin-top: 56px; padding: 48px 0; }
 
-  .presentes-section { margin-top: 56px; padding: 48px 0; }
   .gifts-grid { grid-template-columns: 1fr; }
 
   .rsvp-section { margin-top: 56px; padding: 48px 0; }
