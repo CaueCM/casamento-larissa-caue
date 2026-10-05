@@ -376,16 +376,8 @@
         <input type="hidden" name="comparecera" id="goingInput" value="">
       </div>
       <div class="field">
-        <div class="field-label">Acompanhantes</div>
-        <div class="stepper">
-          <span class="stepper-label">Número de pessoas</span>
-          <div class="stepper-controls">
-            <button type="button" class="stepper-btn" id="decBtn" aria-label="Diminuir">−</button>
-            <span class="stepper-val" id="guestsVal">1</span>
-            <button type="button" class="stepper-btn" id="incBtn" aria-label="Aumentar">+</button>
-          </div>
-        </div>
-        <input type="hidden" name="acompanhantes" id="guestsInput" value="1">
+        <label class="field-label" for="rsvpPhone">Telefone para contato</label>
+        <input id="rsvpPhone" name="telefone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="(11) 91234-5678" maxlength="15" required>
       </div>
       <div class="field">
         <label class="field-label" for="rsvpMsg">Recado aos noivos</label>

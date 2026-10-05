@@ -87,15 +87,10 @@
   const btnYes = document.getElementById('btnYes');
   const btnNo = document.getElementById('btnNo');
   const goingInput = document.getElementById('goingInput');
-  const decBtn = document.getElementById('decBtn');
-  const incBtn = document.getElementById('incBtn');
-  const guestsVal = document.getElementById('guestsVal');
-  const guestsInput = document.getElementById('guestsInput');
+  const phoneInput = document.getElementById('rsvpPhone');
   const form = document.getElementById('rsvpForm');
   const feedback = document.getElementById('rsvpFeedback');
   if (!form) return;
-
-  let guests = 1;
 
   function setGoing(value) {
     goingInput.value = value;
@@ -106,18 +101,17 @@
   btnYes.addEventListener('click', () => setGoing('yes'));
   btnNo.addEventListener('click', () => setGoing('no'));
 
-  function updateGuests() {
-    guestsVal.textContent = String(guests);
-    guestsInput.value = String(guests);
+  // Máscara (DDD) 91234-5678 ou (DDD) 1234-5678
+  function maskPhone(value) {
+    const d = value.replace(/\D/g, '').slice(0, 11);
+    if (d.length <= 2) return d ? `(${d}` : '';
+    if (d.length <= 6) return `(${d.slice(0, 2)}) ${d.slice(2)}`;
+    if (d.length <= 10) return `(${d.slice(0, 2)}) ${d.slice(2, 6)}-${d.slice(6)}`;
+    return `(${d.slice(0, 2)}) ${d.slice(2, 7)}-${d.slice(7)}`;
   }
 
-  incBtn.addEventListener('click', () => {
-    guests = Math.min(9, guests + 1);
-    updateGuests();
-  });
-  decBtn.addEventListener('click', () => {
-    guests = Math.max(1, guests - 1);
-    updateGuests();
+  phoneInput.addEventListener('input', () => {
+    phoneInput.value = maskPhone(phoneInput.value);
   });
 
   form.addEventListener('submit', async (e) => {
@@ -127,6 +121,14 @@
     if (!nome) {
       feedback.textContent = 'Por favor, preencha seu nome.';
       feedback.style.color = '#BE7F55';
+      return;
+    }
+    const telefone = phoneInput.value.trim();
+    const digits = telefone.replace(/\D/g, '');
+    if (digits.length < 10 || digits.length > 11 || digits[0] === '0') {
+      feedback.textContent = 'Informe um telefone válido com DDD, por exemplo (11) 91234-5678.';
+      feedback.style.color = '#BE7F55';
+      phoneInput.focus();
       return;
     }
     if (!goingInput.value) {
@@ -144,7 +146,7 @@
     const payload = {
       nome,
       comparecera: goingInput.value,
-      acompanhantes: guestsInput.value,
+      telefone,
       recado: form.recado.value.trim(),
     };
 
@@ -158,8 +160,6 @@
       feedback.style.color = '#5B6A46';
       form.reset();
       setGoing('');
-      guests = 1;
-      updateGuests();
     } catch (err) {
       feedback.textContent = 'Não conseguimos enviar agora. Tente novamente em instantes.';
       feedback.style.color = '#BE7F55';
