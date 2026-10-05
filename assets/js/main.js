@@ -120,20 +120,20 @@
     const nome = form.nome.value.trim();
     if (!nome) {
       feedback.textContent = 'Por favor, preencha seu nome.';
-      feedback.style.color = '#BE7F55';
+      feedback.style.color = '#965A36';
       return;
     }
     const telefone = phoneInput.value.trim();
     const digits = telefone.replace(/\D/g, '');
     if (digits.length < 10 || digits.length > 11 || digits[0] === '0') {
       feedback.textContent = 'Informe um telefone válido com DDD, por exemplo (11) 91234-5678.';
-      feedback.style.color = '#BE7F55';
+      feedback.style.color = '#965A36';
       phoneInput.focus();
       return;
     }
     if (!goingInput.value) {
       feedback.textContent = 'Conta pra gente se você vai poder vir!';
-      feedback.style.color = '#BE7F55';
+      feedback.style.color = '#965A36';
       return;
     }
 
@@ -162,7 +162,7 @@
       setGoing('');
     } catch (err) {
       feedback.textContent = 'Não conseguimos enviar agora. Tente novamente em instantes.';
-      feedback.style.color = '#BE7F55';
+      feedback.style.color = '#965A36';
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = originalLabel;
