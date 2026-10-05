@@ -241,7 +241,7 @@ function copyToClipboard(text, btn) {
 
     if (amount) {
       qrEl.src = `assets/img/pix/qrcode-pix${amount}.png`;
-      qrEl.alt = `QR Code PIX de ${price}`;
+      qrEl.alt = `QR Code Pix de ${price}`;
       qrEl.hidden = false;
       noteEl.hidden = true;
       hintEl.hidden = false;

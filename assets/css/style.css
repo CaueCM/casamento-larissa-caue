@@ -5,10 +5,11 @@
   --surface: #FFFDF9;
   --text-primary: #33291E;
   --text-secondary: #574636;
-  --text-tertiary: #8B7E6C;
+  --text-tertiary: #74695A;
   --olive: #5B6A46;
   --sage: #8E9C7C;
   --sage-light: #BAC6A6;
+  --sage-text: #667059;      /* sálvia escurecido p/ texto pequeno (contraste AA) */
   --terracota: #BE7F55;
   --border: #EDE6D7;
   --chip-green-bg: #EEF0E7;
@@ -42,10 +43,10 @@ a { color: inherit; }
   font-size: 13px;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--sage-text);
   font-weight: 600;
 }
-.eyebrow-light { color: var(--sage-light); }
+.eyebrow-light { color: #E1E7D6; }
 
 .section-head { text-align: center; margin-bottom: 56px; }
 .section-title {
@@ -203,7 +204,7 @@ a { color: inherit; }
   text-align: center;
   box-shadow: 0 12px 30px rgba(51, 41, 30, 0.08);
 }
-.std-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage); font-weight: 600; }
+.std-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage-text); font-weight: 600; }
 .std-date { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 500; font-size: 40px; line-height: 1; color: var(--olive); margin-top: 4px; }
 
 .countdown {
@@ -233,7 +234,7 @@ a { color: inherit; }
 .chip-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 11px; }
 
 /* ===================== LOCAL ===================== */
-.local-section { background: var(--beige); margin-top: 64px; padding: 60px 0; }
+.local-section { background: var(--beige); margin-top: 64px; padding: 0 0 64px; }
 .local-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; align-items: stretch; }
 .map-card { border: 1px solid var(--border); border-radius: 22px; overflow: hidden; background: var(--surface); display: flex; flex-direction: column; }
 .map-embed { flex: 1; min-height: 280px; }
@@ -276,7 +277,7 @@ a { color: inherit; }
 .cores-text { margin: 16px 0 0; font-size: 14.5px; line-height: 1.7; color: var(--text-secondary); }
 
 /* ===================== INSPIRAÇÕES ===================== */
-.inspiracoes-section { background: var(--beige); margin-top: 64px; padding: 60px 0; }
+.inspiracoes-section { background: var(--beige); margin-top: 64px; padding: 0 0 64px; }
 .inspiracoes-section .section-head { margin-bottom: 20px; }
 .pinterest-embed { margin-top: 40px; display: flex; justify-content: center; overflow-x: auto; }
 
@@ -289,7 +290,7 @@ a { color: inherit; }
 .hospedagem-content .hospedagem-note { margin: 26px 0 0; font-size: 13px; color: var(--text-tertiary); }
 
 /* ===================== PRESENTES ===================== */
-.presentes-section { background: var(--beige); margin-top: 64px; padding: 60px 0; }
+.presentes-section { background: var(--beige); margin-top: 64px; padding: 0 0 64px; }
 .presentes-section .section-head { margin-bottom: 20px; }
 .gifts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
 .gift-card { border: 1px solid var(--border); border-radius: 20px; background: var(--surface); overflow: hidden; }
@@ -387,7 +388,7 @@ a { color: inherit; }
 .pix-box-modal { margin-top: 16px; padding: 16px 18px; }
 
 /* ===================== RSVP ===================== */
-.rsvp-section { background: var(--olive); margin-top: 64px; padding: 60px 0; }
+.rsvp-section { background: var(--olive); padding: 64px 0; }
 .rsvp-head { max-width: 720px; margin: 0 auto; padding: 0 40px; text-align: center; }
 .rsvp-sub { margin: 14px auto 0; font-size: 16px; color: #DDE3D2; max-width: 440px; }
 .rsvp-form-wrap { max-width: 560px; margin: 40px auto 0; padding: 0 40px; }
@@ -432,7 +433,7 @@ a { color: inherit; }
 .rsvp-feedback { text-align: center; font-size: 14px; color: var(--olive); margin: 0; min-height: 18px; }
 
 /* ===================== FAQ ===================== */
-.faq { padding-bottom: 40px; }
+.faq { padding-bottom: 0; }
 .faq-list { display: flex; flex-direction: column; gap: 14px; }
 .faq-item { border: 1px solid var(--border); border-radius: 16px; background: var(--surface); overflow: hidden; }
 .faq-question {
@@ -476,6 +477,11 @@ a { color: inherit; }
 .footer-hashtag { font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terracota); font-weight: 600; margin-top: 20px; }
 .footer-note { font-size: 12.5px; color: var(--text-tertiary); margin-top: 32px; }
 
+/* Card que sobra sozinho na última linha do grid de presentes fica centralizado */
+@media (min-width: 901px) {
+  .gifts-grid .gift-card:last-child:nth-child(3n + 1) { grid-column: 2; }
+}
+
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 900px) {
   .section-max { padding-left: 22px; padding-right: 22px; }
@@ -515,20 +521,19 @@ a { color: inherit; }
   .countdown-items { justify-content: space-around; gap: 12px; }
   .countdown-num { font-size: 30px; }
 
-  .local-section { margin-top: 56px; padding: 48px 0; }
+  .local-section, .inspiracoes-section, .presentes-section { margin-top: 56px; padding: 0 0 56px; }
+  .local-section > .section-max, .inspiracoes-section > .section-max, .presentes-section > .section-max { padding-top: 56px; }
   .local-grid { grid-template-columns: 1fr; }
 
   .traje { padding-top: 56px; }
   .dresscode-grid { grid-template-columns: 1fr; }
 
-  .inspiracoes-section { margin-top: 56px; padding: 48px 0; }
 
   .hospedagem { padding-top: 56px; }
 
-  .presentes-section { margin-top: 56px; padding: 48px 0; }
   .gifts-grid { grid-template-columns: 1fr; }
 
-  .rsvp-section { margin-top: 56px; padding: 48px 0; }
+  .rsvp-section { padding: 56px 0; }
   .rsvp-form { padding: 24px 22px; }
   .rsvp-form-wrap { padding: 0 22px; }
   .rsvp-head { padding: 0 22px; }
