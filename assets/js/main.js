@@ -34,7 +34,7 @@
       'DTSTART;VALUE=DATE:20270424',
       'DTEND;VALUE=DATE:20270425',
       'SUMMARY:Casamento de Larissa & Cauê',
-      'DESCRIPTION:Horário a definir — avisaremos em breve. Local: Rancho Santa Maria.',
+      'DESCRIPTION:Horário a definir. Avisaremos em breve. Local: Rancho Santa Maria.',
       'LOCATION:Rancho Santa Maria - Alameda dos Gerânios\\, Condomínio Jardim Cinco Lagos\\, Pirucaia\\, Mairiporã/SP',
       'END:VEVENT',
       'END:VCALENDAR',
@@ -154,7 +154,7 @@
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify(payload),
       });
-      feedback.textContent = `Obrigado, ${nome}! Sua confirmação foi registrada com carinho. 🌿`;
+      feedback.textContent = `Obrigado, ${nome}! Sua confirmação foi registrada. 🌿`;
       feedback.style.color = '#5B6A46';
       form.reset();
       setGoing('');
