@@ -187,7 +187,7 @@ a { color: inherit; }
   margin-top: 24px;
   flex-wrap: wrap;
 }
-.hero-meta-item { font-size: 16px; color: var(--text-primary); font-weight: 600; }
+.hero-meta-item { font-size: 20px; color: var(--text-primary); font-weight: 700; }
 .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--terracota); display: inline-block; }
 .hero-ctas { display: flex; gap: 14px; margin-top: 32px; flex-wrap: wrap; }
 
@@ -237,54 +237,55 @@ a { color: inherit; }
 /* ===================== LOCAL ===================== */
 .local-section { background: var(--beige); margin-top: 64px; padding: 0 0 64px; }
 
-.quando-card { border: 1px solid var(--border); border-radius: 22px; background: var(--surface); padding: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 920px; margin: 0 auto; }
+.quando-card { border: 1px solid var(--border); border-radius: 22px; background: var(--surface); padding: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 0 auto; }
 .quando-col { display: flex; flex-direction: column; }
 .quando-col + .quando-col { border-left: 1px solid var(--border); padding-left: 40px; }
 .quando-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 600; }
-.quando-time { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 500; font-size: 56px; line-height: 1; color: var(--olive); margin-top: 10px; }
-.quando-date-year { font-size: 15px; font-weight: 600; color: var(--text-secondary); margin: 10px 0 0; }
+.quando-date { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 500; font-size: 30px; line-height: 1.15; color: var(--olive); margin-top: 10px; }
+.quando-place { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 500; font-size: 30px; line-height: 1.15; color: var(--text-primary); margin-top: 10px; }
+.quando-distance { font-size: 14px; color: var(--text-secondary); margin: 6px 0 0; }
 .quando-label-spaced { margin-top: 24px; }
 .quando-time-tbd { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 500; font-size: 30px; line-height: 1; color: var(--terracota); margin-top: 10px; }
 .quando-hint { font-size: 14px; color: var(--text-secondary); margin: 14px 0 0; line-height: 1.5; }
 .quando-address { font-size: 16px; font-weight: 600; color: var(--text-primary); line-height: 1.5; margin: 10px 0 0; }
 .quando-cta { margin-top: 22px; width: 100%; font-size: 14px; padding: 12px 22px; }
 .quando-cta ~ .quando-cta { margin-top: 12px; }
+.map-embed { margin-top: 16px; height: 220px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+.map-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
 
 /* ===================== TRAJE ===================== */
 .traje { padding-top: 64px; }
 .traje .section-head { margin-bottom: 20px; }
-.dresscode-single { max-width: 760px; margin: 40px auto 0; }
+.dresscode-lead { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 500; font-size: 24px; color: var(--text-primary); margin: 16px 0 0; }
+.dresscode-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; }
 .dresscode-card { border: 1px solid var(--border); border-radius: 20px; background: var(--surface); padding: 28px 30px; }
+.dresscode-card-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 20px; margin: 0 0 14px; }
+.dresscode-text { margin: 0; font-size: 14.5px; line-height: 1.7; color: var(--text-secondary); }
 .dresscode-list { margin: 0; padding-left: 20px; }
 .dresscode-list li { font-size: 14.5px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 12px; }
 .dresscode-list li:last-child { margin-bottom: 0; }
 
-/* ===================== CORES ===================== */
-.dresscode-sub { margin-top: 56px; padding-top: 48px; border-top: 1px solid var(--border); text-align: center; }
-.dresscode-sub-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 500; font-size: 32px; letter-spacing: -0.015em; margin: 0; }
-.dresscode-sub-text { margin: 12px auto 0; max-width: 520px; font-size: 16px; line-height: 1.6; color: var(--text-secondary); }
-.dresscode-sub .dresscode-card { text-align: left; margin-top: 28px; }
-.swatches { display: flex; flex-wrap: wrap; gap: 18px 22px; }
-.swatch-item { display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--text-secondary); }
-.swatch { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border); display: inline-block; }
-.swatch-olive { background: var(--olive); }
-.swatch-sage { background: var(--sage); }
-.swatch-sand { background: #D9C7A3; }
-.swatch-white { background: #FFFFFF; }
-.cores-text { margin: 16px 0 0; font-size: 14.5px; line-height: 1.7; color: var(--text-secondary); }
-
-/* ===================== INSPIRAÇÕES ===================== */
-.inspiracoes-section { background: var(--beige); margin-top: 64px; padding: 0 0 64px; }
-.inspiracoes-section .section-head { margin-bottom: 20px; }
-.pinterest-embed { margin-top: 40px; display: flex; justify-content: center; overflow-x: auto; }
+/* Referências (Pinterest) dentro do dress code */
+.dresscode-refs { margin-top: 56px; text-align: center; }
+.dresscode-sub-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 500; font-size: 28px; letter-spacing: -0.015em; margin: 0; }
+.pinterest-embed { margin-top: 24px; display: flex; justify-content: center; overflow-x: auto; }
 
 /* ===================== HOSPEDAGEM ===================== */
-.hospedagem { padding-top: 64px; }
-.hospedagem .section-head { margin-bottom: 20px; }
+.hospedagem-section { background: var(--beige); margin-top: 64px; padding: 0 0 64px; }
+.hospedagem-section .section-head { margin-bottom: 20px; }
 .hospedagem-content { max-width: 620px; margin: 40px auto 0; text-align: center; }
 .hospedagem-content p { font-size: 16px; line-height: 1.7; color: var(--text-secondary); margin: 0 0 18px; }
 .hospedagem-content .btn { margin-top: 8px; }
 .hospedagem-content .hospedagem-note { margin: 26px 0 0; font-size: 13px; color: var(--text-tertiary); }
+
+/* ===================== FORRÓ ===================== */
+.forro .section-head { margin-bottom: 20px; }
+.forro-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 300px)); justify-content: center; gap: 20px; margin-top: 36px; }
+.forro-card { display: flex; flex-direction: column; gap: 6px; padding: 24px 26px; border: 1px solid var(--border); border-radius: 20px; background: var(--surface); text-decoration: none; transition: border-color 0.2s; }
+.forro-card:hover, .forro-card:focus-visible { border-color: var(--olive); }
+.forro-card-name { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 20px; color: var(--text-primary); }
+.forro-card-meta { font-size: 13px; color: var(--text-tertiary); }
+.forro-card-meta::after { content: ' ↗'; }
 
 /* ===================== PRESENTES ===================== */
 .presentes-section { background: var(--beige); margin-top: 64px; padding: 0 0 64px; }
@@ -305,7 +306,6 @@ a { color: inherit; }
 .gift-sub { font-size: 13px; color: var(--text-tertiary); margin-top: 2px; }
 .gift-price { background: var(--chip-green-bg); color: var(--chip-green-fg); font-size: 15px; font-weight: 700; padding: 6px 12px; border-radius: 10px; white-space: nowrap; }
 .gift-btn { margin-top: 18px; }
-.gift-btn-card { width: 100%; font-size: 14px; padding: 11px 0; margin-top: 10px; }
 
 .pix-box {
   margin-top: 26px;
@@ -389,6 +389,7 @@ a { color: inherit; }
 .rsvp-head { max-width: 720px; margin: 0 auto; padding: 0 40px; text-align: center; }
 .rsvp-sub { margin: 14px auto 0; font-size: 16px; color: #DDE3D2; max-width: 440px; }
 .rsvp-form-wrap { max-width: 560px; margin: 40px auto 0; padding: 0 40px; }
+.rsvp-note { margin: 0; font-size: 14px; line-height: 1.5; color: var(--text-secondary); background: var(--chip-green-bg); border-radius: 12px; padding: 12px 14px; }
 .rsvp-form { background: var(--cream); border-radius: 22px; padding: 36px 38px; display: flex; flex-direction: column; gap: 22px; }
 .field-label { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 600; margin-bottom: 9px; }
 .rsvp-form input[type="text"],
@@ -466,13 +467,9 @@ a { color: inherit; }
 /* ===================== FOOTER ===================== */
 .footer { margin-top: 64px; background: var(--beige); border-top: 1px solid var(--border); padding: 48px 40px 40px; }
 .footer-inner { max-width: 1180px; margin: 0 auto; text-align: center; }
-.footer-divider { display: flex; align-items: center; justify-content: center; gap: 12px; color: var(--sage); margin-bottom: 22px; }
-.footer-divider .line { width: 60px; height: 1px; background: #D9CDB6; }
-.footer-divider .leaf { font-size: 20px; }
 .footer-names { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 500; font-size: 44px; letter-spacing: -0.02em; }
 .footer-meta { font-size: 15px; color: var(--text-secondary); margin-top: 12px; }
-.footer-hashtag { font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terracota-strong); font-weight: 600; margin-top: 20px; }
-.footer-note { font-size: 12.5px; color: var(--text-tertiary); margin-top: 32px; }
+.footer-note { font-size: 15px; color: var(--text-secondary); margin-top: 18px; }
 
 /* Card que sobra sozinho na última linha do grid de presentes fica centralizado */
 @media (min-width: 901px) {
@@ -518,15 +515,17 @@ a { color: inherit; }
   .countdown-items { justify-content: space-around; gap: 12px; }
   .countdown-num { font-size: 30px; }
 
-  .local-section, .inspiracoes-section, .presentes-section { margin-top: 56px; padding: 0 0 56px; }
-  .local-section > .section-max, .inspiracoes-section > .section-max, .presentes-section > .section-max { padding-top: 56px; }
+  .local-section, .hospedagem-section, .presentes-section { margin-top: 56px; padding: 0 0 56px; }
+  .local-section > .section-max, .hospedagem-section > .section-max, .presentes-section > .section-max { padding-top: 56px; }
+  .hero-meta-item { font-size: 18px; }
   .quando-card { grid-template-columns: 1fr; gap: 28px; padding: 28px 24px; }
   .quando-col + .quando-col { border-left: none; padding-left: 0; border-top: 1px solid var(--border); padding-top: 28px; }
 
   .traje { padding-top: 56px; }
+  .dresscode-grid { grid-template-columns: 1fr; }
+  .forro-grid { grid-template-columns: 1fr; }
 
 
-  .hospedagem { padding-top: 56px; }
 
   .gifts-grid { grid-template-columns: 1fr; }
 

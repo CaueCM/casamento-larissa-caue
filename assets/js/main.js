@@ -35,7 +35,7 @@
       'DTEND;VALUE=DATE:20270425',
       'SUMMARY:Casamento de Larissa & Cauê',
       'DESCRIPTION:Horário a definir. Avisaremos em breve. Local: Rancho Santa Maria.',
-      'LOCATION:Rancho Santa Maria - Alameda dos Gerânios\\, Condomínio Jardim Cinco Lagos\\, Pirucaia\\, Mairiporã/SP',
+      'LOCATION:Rancho Santa Maria - Alameda dos Gerânios\\, 70 – Condomínio Cinco Lagos\\, Jd. Cinco Lagos\\, Mairiporã/SP – CEP 07636-400',
       'END:VEVENT',
       'END:VCALENDAR',
     ].join('\r\n');
