@@ -17,41 +17,6 @@
   });
 })();
 
-// ===================== ADD TO CALENDAR ===================== //
-(function () {
-  const btn = document.getElementById('addToCalendarBtn');
-  if (!btn) return;
-
-  btn.addEventListener('click', () => {
-    const ics = [
-      'BEGIN:VCALENDAR',
-      'VERSION:2.0',
-      'PRODID:-//Larissa e Cauê//Casamento//PT-BR',
-      'CALSCALE:GREGORIAN',
-      'BEGIN:VEVENT',
-      'UID:larissa-caue-casamento-24042027@laricasacomocaue',
-      'DTSTAMP:20260718T120000Z',
-      'DTSTART;VALUE=DATE:20270424',
-      'DTEND;VALUE=DATE:20270425',
-      'SUMMARY:Casamento de Larissa & Cauê',
-      'DESCRIPTION:Horário a definir. Avisaremos em breve. Local: Rancho Santa Maria.',
-      'LOCATION:Rancho Santa Maria - Alameda dos Gerânios\\, 70 – Condomínio Cinco Lagos\\, Jd. Cinco Lagos\\, Mairiporã/SP – CEP 07636-400',
-      'END:VEVENT',
-      'END:VCALENDAR',
-    ].join('\r\n');
-
-    const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'casamento-larissa-caue.ics';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  });
-})();
-
 // ===================== COUNTDOWN ===================== //
 (function () {
   const target = new Date('2027-04-24T00:00:00-03:00').getTime();
