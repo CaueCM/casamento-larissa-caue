@@ -13,7 +13,7 @@ Publicado via GitHub Pages a partir da branch `main`.
 O formulário envia cada confirmação via `fetch` para um Google Apps Script implantado
 como Web App, que adiciona uma linha na aba "RSVP" da planilha "Planilha Geral
 Casamento" (colunas: Nome completo, Você vai comparecer?, Telefone, Número de pessoas
-(antiga, não é mais preenchida), Recado aos noivos, Timestamp). O endpoint está em `RSVP_ENDPOINT` no topo de
+(antiga, não é mais preenchida), Recado aos noivos, Timestamp, Número do chinelo). O endpoint está em `RSVP_ENDPOINT` no topo de
 `assets/js/main.js`. Se precisar trocar a planilha/script, é só atualizar essa URL.
 
 ## Pendências antes do grande dia

@@ -53,6 +53,8 @@
   const btnNo = document.getElementById('btnNo');
   const goingInput = document.getElementById('goingInput');
   const phoneInput = document.getElementById('rsvpPhone');
+  const shoeField = document.getElementById('shoeField');
+  const shoeSelect = document.getElementById('rsvpShoe');
   const form = document.getElementById('rsvpForm');
   const feedback = document.getElementById('rsvpFeedback');
   if (!form) return;
@@ -61,6 +63,9 @@
     goingInput.value = value;
     btnYes.classList.toggle('active-yes', value === 'yes');
     btnNo.classList.toggle('active-no', value === 'no');
+    // Número do chinelo só faz sentido para quem vem
+    shoeField.hidden = value !== 'yes';
+    if (value !== 'yes') shoeSelect.value = '';
   }
 
   btnYes.addEventListener('click', () => setGoing('yes'));
@@ -112,6 +117,7 @@
       nome,
       comparecera: goingInput.value,
       telefone,
+      chinelo: shoeSelect.value,
       recado: form.recado.value.trim(),
     };
 

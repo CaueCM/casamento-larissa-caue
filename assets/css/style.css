@@ -405,6 +405,7 @@ a { color: inherit; }
 .field-label { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 600; margin-bottom: 9px; }
 .rsvp-form input[type="text"],
 .rsvp-form input[type="tel"],
+.rsvp-form select,
 .rsvp-form textarea {
   width: 100%;
   background: var(--surface);
@@ -417,8 +418,19 @@ a { color: inherit; }
   outline: none;
 }
 .rsvp-form textarea { min-height: 90px; resize: vertical; }
+.rsvp-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 44px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23574636' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
 .rsvp-form input:focus,
+.rsvp-form select:focus,
 .rsvp-form textarea:focus { border-color: var(--olive); }
+.field-hint { margin: -2px 0 10px; font-size: 13.5px; line-height: 1.5; color: var(--text-secondary); }
 
 .toggle-group { display: flex; gap: 10px; }
 .toggle-btn {
