@@ -55,6 +55,7 @@
   const phoneInput = document.getElementById('rsvpPhone');
   const shoeField = document.getElementById('shoeField');
   const shoeSelect = document.getElementById('rsvpShoe');
+  const shoeOther = document.getElementById('rsvpShoeOther');
   const form = document.getElementById('rsvpForm');
   const feedback = document.getElementById('rsvpFeedback');
   if (!form) return;
@@ -65,8 +66,23 @@
     btnNo.classList.toggle('active-no', value === 'no');
     // Número do chinelo só faz sentido para quem vem
     shoeField.hidden = value !== 'yes';
-    if (value !== 'yes') shoeSelect.value = '';
+    if (value !== 'yes') {
+      shoeSelect.value = '';
+      toggleShoeOther();
+    }
   }
+
+  // "Outro número" abre um campo livre
+  function toggleShoeOther() {
+    const isOther = shoeSelect.value === 'outro';
+    shoeOther.hidden = !isOther;
+    if (!isOther) shoeOther.value = '';
+  }
+
+  shoeSelect.addEventListener('change', () => {
+    toggleShoeOther();
+    if (!shoeOther.hidden) shoeOther.focus();
+  });
 
   btnYes.addEventListener('click', () => setGoing('yes'));
   btnNo.addEventListener('click', () => setGoing('no'));
@@ -117,7 +133,7 @@
       nome,
       comparecera: goingInput.value,
       telefone,
-      chinelo: shoeSelect.value,
+      chinelo: shoeSelect.value === 'outro' ? shoeOther.value.trim() : shoeSelect.value,
       recado: form.recado.value.trim(),
     };
 

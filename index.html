@@ -398,8 +398,7 @@
         <input id="rsvpPhone" name="telefone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="(11) 91234-5678" maxlength="15" required>
       </div>
       <div class="field" id="shoeField" hidden>
-        <label class="field-label" for="rsvpShoe">Número do chinelo</label>
-        <p class="field-hint">Para as convidadas: vai ter chinelo pra curtir a pista! Se quiser um, escolha o seu número.</p>
+        <label class="field-hint" for="rsvpShoe">Para quem estiver de salto: vai ter chinelo pra curtir a pista! Se quiser um, escolha o seu número.</label>
         <select id="rsvpShoe" name="chinelo">
           <option value="">Não quero chinelo</option>
           <option value="33/34">33/34</option>
@@ -407,7 +406,9 @@
           <option value="37/38">37/38</option>
           <option value="39/40">39/40</option>
           <option value="41/42">41/42</option>
+          <option value="outro">Outro número</option>
         </select>
+        <input id="rsvpShoeOther" name="chinelo_outro" type="text" inputmode="numeric" maxlength="10" placeholder="Qual o seu número?" aria-label="Número do chinelo, se não estiver na lista" hidden>
       </div>
       <div class="field">
         <label class="field-label" for="rsvpMsg">Recado aos noivos</label>

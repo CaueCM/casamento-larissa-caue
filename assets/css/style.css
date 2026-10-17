@@ -430,7 +430,9 @@ a { color: inherit; }
 .rsvp-form input:focus,
 .rsvp-form select:focus,
 .rsvp-form textarea:focus { border-color: var(--olive); }
-.field-hint { margin: -2px 0 10px; font-size: 13.5px; line-height: 1.5; color: var(--text-secondary); }
+.field-hint { display: block; margin: 0 0 10px; font-size: 14px; line-height: 1.5; color: var(--text-secondary); }
+#rsvpShoeOther { margin-top: 10px; }
+#rsvpShoeOther[hidden] { display: none; }
 
 .toggle-group { display: flex; gap: 10px; }
 .toggle-btn {
